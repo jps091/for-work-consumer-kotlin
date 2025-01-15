@@ -6,7 +6,7 @@ import org.springframework.data.redis.RedisConnectionFailureException;
 import org.springframework.mail.MailAuthenticationException;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class MyFatalExceptionStrategy implements FatalExceptionStrategy {
 
     private final FatalExceptionStrategy fatalExceptionStrategy = new ConditionalRejectingErrorHandler.DefaultExceptionStrategy();
