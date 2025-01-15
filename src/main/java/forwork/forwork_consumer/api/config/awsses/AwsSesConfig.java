@@ -8,7 +8,7 @@ import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.ses.SesClient;
 
-@Configuration
+//@Configuration
 public class AwsSesConfig {
 
     @Value("${aws.credentials.accessKey}")
