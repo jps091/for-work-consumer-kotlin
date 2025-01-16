@@ -5,7 +5,7 @@ import forwork.forwork_consumer.api.exception.InvalidEmailException;
 import org.springframework.stereotype.Component;
 
 import java.util.regex.Pattern;
-@Component
+//@Component
 public class EmailValidator {
     // 이메일 형식 확인을 위한 정규 표현식
     private static final String EMAIL_REGEX = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$";
