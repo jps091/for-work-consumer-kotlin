@@ -1,6 +1,6 @@
 package com.consumer.handler
 
-import com.consumer.infrastructure.deadletter.message.FailMessage
+import com.consumer.consumer.deadletter.message.FailMessage
 import com.consumer.service.MailLogService
 import com.fasterxml.jackson.core.JsonProcessingException
 import com.fasterxml.jackson.databind.ObjectMapper
@@ -40,7 +40,7 @@ class MyErrorHandler(
         mailLogService.registerFailLog(message, e)
     }
 
-    private fun parsing(messageBody: String): FailMessage{
+    private fun parsing(messageBody: String): FailMessage {
         try{
             return objectMapper.readValue(messageBody, FailMessage::class.java)
         }catch (e: JsonProcessingException){

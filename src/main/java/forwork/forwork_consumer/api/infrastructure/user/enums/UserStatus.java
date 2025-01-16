@@ -22,5 +22,4 @@ public enum UserStatus {
         }
         throw new IllegalArgumentException("Invalid Status: " + s);
     }
-
 }

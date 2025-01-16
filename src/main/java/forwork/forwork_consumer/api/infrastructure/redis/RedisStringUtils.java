@@ -40,19 +40,6 @@ public class RedisStringUtils {
         return prefix + value;
     }
 
-    public Boolean lock(Long key){
-        return redisTemplate.opsForValue()
-                .setIfAbsent(generateKey(key), "lock", Duration.ofSeconds(3));
-    }
-
-    public Boolean unLock(Long key){
-        return redisTemplate.delete(generateKey(key));
-    }
-
-    private String generateKey(Long key) {
-        return key.toString();
-    }
-
 
     public void safeIncrement(String key) {
         redisTemplate.opsForValue().increment(key, 1);
