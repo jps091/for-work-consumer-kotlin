@@ -1,4 +1,4 @@
-package com.consumer.infrastructure.deadletter.message
+package com.consumer.consumer.deadletter.message
 
 import com.consumer.consumer.MessageIfs
 
