@@ -6,9 +6,10 @@ import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.mail.SimpleMailMessage
 import org.springframework.mail.javamail.JavaMailSender
+import org.springframework.stereotype.Component
 import software.amazon.awssdk.services.ses.SesClient
 import software.amazon.awssdk.services.ses.model.*
-
+@Component
 class MailSenderImpl(
         @Value("\${aws.mail}") private val mail: String,
         private val javaMailSender: JavaMailSender,
